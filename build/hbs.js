@@ -1,13 +1,20 @@
-const gulp = require('gulp'),
+const gulp        = require('gulp'),
       runSequence = require('run-sequence'),
-      fs = require('fs'),
-      rename = require('gulp-rename'),
-      gutil = require('gulp-util'),
-      zeroFill = require('zero-fill'),
+      fs          = require('fs'),
+      rename      = require('gulp-rename'),
+      browserSync = require('browser-sync'),
+      gutil       = require('gulp-util'),
+      zeroFill    = require('zero-fill'),
       stringWidth = require('string-width'),
-      handlebars = require('gulp-compile-handlebars'),
-      hbs = [],
-      options = {
+      handlebars  = require('gulp-compile-handlebars'),
+      hbs         = [],
+      slugify = text => text.toString().toLowerCase()
+        .replace(/\s+/g, '-')     // Replace spaces with -
+        .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+        .replace(/\-\-+/g, '-')   // Replace multiple - with single -
+        .replace(/^-+/, '')       // Trim - from start of text
+        .replace(/-+$/, ''),      // Trim - from end of text
+      options     = {
         ignorePartials: true,
         batch:          ['app/templates/components'],
         helpers:        {
@@ -27,14 +34,7 @@ const gulp = require('gulp'),
             return a.slice(0, limit);
           }
         }
-      },
-      slugify = text => text.toString().toLowerCase()
-        .replace(/\s+/g, '-')     // Replace spaces with -
-        .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-        .replace(/\-\-+/g, '-')   // Replace multiple - with single -
-        .replace(/^-+/, '')       // Trim - from start of text
-        .replace(/-+$/, '')       // Trim - from end of text
-      ;
+      };
 
 
 gulp.task('hbs', callback => runSequence(
@@ -52,6 +52,7 @@ gulp.task('hbs:generate', () => {
     gulp.src('app/templates/post.hbs')
       .pipe(handlebars(post, options))
       .pipe(rename(`${date}-${slugify(post.title)}/index.html`))
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('dist'))
+      .pipe(browserSync.reload({ stream: true }));
   });
 });

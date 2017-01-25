@@ -6,7 +6,7 @@ requireDir('build');
 
 gulp.task('default', callback => runSequence(
   'yaml',
-  'json',
+  ['json', 'scss'],
   'hbs',
-  //'clean',
+  // 'clean',
   callback));

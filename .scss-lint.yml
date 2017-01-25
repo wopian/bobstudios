@@ -1,0 +1,32 @@
+options:
+    max-warnings: 50
+    formatter: stylish
+    merge-default-rules: true
+
+scss_files: 'app/styles/*.scss'
+exclude: 'app/styles/vendor'
+
+rules:
+    placeholder-in-extend: 0
+    indentation:
+        - 2
+        - size: 4
+    hex-notation:
+        - 2
+        - style: uppercase
+
+# Rules for gulp-scss-lint
+severity: warning 
+linters:
+    PlaceholderInExtend:
+        enabled: false
+    Indentation:
+        enabled: true
+        character: space
+        width: 4
+    HexNotation:
+        enabled: true
+        style: uppercase
+    NestingDepth:
+        enabled: true
+        max_depth: 5

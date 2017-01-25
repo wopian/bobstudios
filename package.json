@@ -15,21 +15,28 @@
   },
   "homepage": "https://github.com/wopian/bobstudios#readme",
   "dependencies": {
+    "browser-sync": "^2.18.6",
     "eslint": "3.14.0",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-compile-handlebars": "^0.6.1",
+    "gulp-cssnano": "^2.1.2",
     "gulp-gh-pages": "0.5.4",
     "gulp-json-concat": "0.0.5",
     "gulp-json-format": "^1.0.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "gulp-yaml": "1.0.1",
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
     "string-width": "^2.0.0",
     "zero-fill": "^2.2.3"
+  },
+  "devDependencies": {
+    "sass-lint": "^1.10.2"
   }
 }

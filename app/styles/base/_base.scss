@@ -1,0 +1,63 @@
+//Hatayama 1
+//A6CFE2
+//2B303A
+//F1FFFA
+//F6F7EB
+//134074
+
+//Hatayama 2
+//1B1D1C
+//53A2BE
+//1D84B5
+//176087
+//191D32
+
+body {
+    background: $white;
+    color: $metal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    &:not(.offset) {
+        // Fixed header offset
+        padding-top: 54px;
+    }
+}
+
+%base {
+    // Sticky footer
+    flex: 3;
+}
+
+main {
+    @extend .container;
+    @extend %base;
+}
+
+footer {
+    background: rgba($metal, .05);
+    box-shadow: 0 -1px 0 0 rgba($metal, .1);
+    height: 54px;
+    margin-top: 1rem;
+
+    div {
+        @extend .container;
+        padding-top: 1rem;
+    }
+
+    a {
+        color: $metal;
+        transition: color 100ms ease-in-out;
+
+        // Space links
+        &:not(:first-of-type) {
+            margin-left: 1rem;
+        }
+
+        &:hover {
+            color: $poppy;
+            text-decoration: none;
+        }
+    }
+}
