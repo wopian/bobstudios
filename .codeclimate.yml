@@ -20,3 +20,5 @@ ratings:
   - "**.scss"
   - "**.js"
   - "**.hbs"
+exclude_paths:
+- "**/vendor/**/*"
