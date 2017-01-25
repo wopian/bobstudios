@@ -4,7 +4,9 @@ const gulp   = require('gulp'),
 
 requireDir('build');
 
-gulp.task('default', callback =>
-  runSequence(
-    callback
-  ));
+gulp.task('default', callback => runSequence(
+  'yaml',
+  'json',
+  'hbs',
+  //'clean',
+  callback));

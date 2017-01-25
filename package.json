@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Repo for Bobstudios' website",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wopian/bobstudios.git"
@@ -20,9 +19,17 @@
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-compile-handlebars": "^0.6.1",
     "gulp-gh-pages": "0.5.4",
+    "gulp-json-concat": "0.0.5",
+    "gulp-json-format": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
     "gulp-yaml": "1.0.1",
     "require-dir": "^0.3.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "string-width": "^2.0.0",
+    "zero-fill": "^2.2.3"
   }
 }
