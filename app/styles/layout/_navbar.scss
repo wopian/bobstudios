@@ -8,24 +8,21 @@ header {
         @extend .container;
         @extend .nav;
         @extend .navbar-nav;
-    }
-    h1,
-    a {
-        color: $metal;
+        a {
+            @extend .nav-item;
+            @extend .nav-link;
+            color: $metal;
+            &:hover {
+                color: $poppy;
+            }
+        }
     }
     h1 {
         @extend .navbar-brand;
         @extend .mb-0;
-        font-family: bold;
         font-size: 1rem;
         line-height: 1.65rem;
         pointer-events: none;
-    }
-    a {
-        @extend .nav-item;
-        @extend .nav-link;
-        &:hover {
-            color: $poppy;
-        }
+        color: $metal;
     }
 }

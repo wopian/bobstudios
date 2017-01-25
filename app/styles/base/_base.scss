@@ -21,7 +21,7 @@ body {
 
     &:not(.offset) {
         // Fixed header offset
-        padding-top: 54px;
+        padding-top: calc(54px + 1rem);
     }
 }
 

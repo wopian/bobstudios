@@ -43,11 +43,18 @@ gulp.task('hbs', callback => runSequence(
   callback));
 
 gulp.task('hbs:read', () => {
-  hbs[0] = JSON.parse(fs.readFileSync('tmp/posts.json'));
+  hbs[0] = JSON.parse(fs.readFileSync('tmp/pages/index.json'));
+  hbs[1] = JSON.parse(fs.readFileSync('tmp/pages/posts.json'));
 });
 
 gulp.task('hbs:generate', () => {
-  Object.values(hbs[0]).forEach((post) => {
+  gulp.src('app/templates/index.hbs')
+    .pipe(handlebars(hbs[0], options))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.reload({ stream: true }));
+
+  Object.values(hbs[1]).forEach((post) => {
     const date = post.date.slice(0, 10);
     gulp.src('app/templates/post.hbs')
       .pipe(handlebars(post, options))

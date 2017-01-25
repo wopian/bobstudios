@@ -18,7 +18,7 @@ gulp.task('watch:rebuild', callback => runSequence(
 ));
 
 gulp.task('watch:files', () => {
-  gulp.watch('app/**/*.scss', []);
+  gulp.watch('app/**/*.scss', ['scss']);
   gulp.watch('app/**/*.yml', ['watch:rebuild']);
   gulp.watch('app/**/*.hbs', ['hbs']);
 });

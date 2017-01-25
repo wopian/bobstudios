@@ -1,0 +1,14 @@
+main.post {
+    section {
+        @extend .row;
+    }
+    article {
+        @extend .col-sm-10;
+    }
+    aside {
+        @extend .col-sm-2;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
