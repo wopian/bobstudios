@@ -1,5 +1,5 @@
 # Bobstudios
-[![Website](https://img.shields.io/website-up-down-green-red/https/bobstudios.nl.svg?style=flat-square)](https://bobstudios.nl))
+[![Website](https://img.shields.io/website-up-down-green-red/https/bobstudios.nl.svg?style=flat-square)](https://bobstudios.nl)
 
 Bobstudios client
 
