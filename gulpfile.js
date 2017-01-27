@@ -4,8 +4,12 @@ const gulp   = require('gulp'),
 
 requireDir('tasks');
 
-gulp.task('default', callback => runSequence(
+gulp.task('generate', callback => runSequence(
   'yaml',
-  ['json', 'scss'],
+  'json',
   'hbs',
+  callback));
+
+gulp.task('default', callback => runSequence(
+  ['generate', 'scss', 'images'],
   callback));
