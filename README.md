@@ -4,9 +4,9 @@
 Bobstudios client
 
 ## Development
-[![Travis](https://img.shields.io/travis/wopian/bobstudios.svg?style=flat-square&label=travis)](https://travis-ci.org/wopian/bobstudios)
-[![Code Climate](https://img.shields.io/codeclimate/github/wopian/bobstudios.svg?style=flat-square)](https://codeclimate.com/github/wopian/bobstudios)
-[![Code Climate](https://img.shields.io/codeclimate/issues/github/wopian/bobstudios.svg?style=flat-square)](https://codeclimate.com/github/wopian/bobstudios/issues)
+[![Travis](https://img.shields.io/travis/wopian/bobstudios-client.svg?style=flat-square&label=travis)](https://travis-ci.org/wopian/bobstudios)
+[![Code Climate](https://img.shields.io/codeclimate/github/wopian/bobstudios-client.svg?style=flat-square)](https://codeclimate.com/github/wopian/bobstudios-client)
+[![Code Climate](https://img.shields.io/codeclimate/issues/github/wopian/bobstudios-client.svg?style=flat-square)](https://codeclimate.com/github/wopian/bobstudios-client/issues)
 
 ### Setup
 ```bash
@@ -15,8 +15,8 @@ node -v
 # Check you're using npm 4.0.0 or above
 npm -v
 # Download source code
-git clone https://github.com/wopian/bobstudios.git
-cd bobstudios
+git clone https://github.com/wopian/bobstudios-client.git
+cd bobstudios-client
 # Install dependencies
 npm i
 ```
