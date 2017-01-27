@@ -1,5 +1,3 @@
-$jumbotron-image: 'https://pbs.twimg.com/media/CmjwoXrWYAAUcsI.jpg:large';
-
 .index {
 }
 
@@ -12,7 +10,7 @@ $jumbotron-image: 'https://pbs.twimg.com/media/CmjwoXrWYAAUcsI.jpg:large';
         height: 100vh;
         width: 100vw;
         position: fixed;
-        background-image: url($jumbotron-image);
+        background-image: url('/assets/images/cta.jpg');
         background-size: cover;
         background-position: center center;
         pointer-events: none;
