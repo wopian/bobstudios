@@ -54,6 +54,12 @@ gulp.task('hbs:generate', () => {
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({ stream: true }));
 
+  gulp.src('app/templates/archive.hbs')
+    .pipe(handlebars(hbs[1], options))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('dist/archive'))
+    .pipe(browserSync.reload({ stream: true }));
+
   Object.values(hbs[1]).forEach((post) => {
     const date = post.date.slice(0, 10);
     gulp.src('app/templates/post.hbs')

@@ -4,25 +4,49 @@ header {
     @extend .navbar-fixed-top;
     background: $white;
     box-shadow: 0 0 1px 0 rgba($metal, .25);
+
     nav {
         @extend .container;
         @extend .nav;
         @extend .navbar-nav;
+
         a {
             @extend .nav-item;
             @extend .nav-link;
             color: $metal;
+
             &:hover {
                 color: $poppy;
             }
         }
     }
+
     h1 {
         @extend .navbar-brand;
         @extend .mb-0;
+        color: $metal;
         font-size: 1rem;
         line-height: 1.65rem;
         pointer-events: none;
-        color: $metal;
+    }
+}
+
+.transparent {
+    background: transparent;
+    box-shadow: none;
+
+    nav {
+
+        h1 {
+            color: $white;
+        }
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: $metal;
+            }
+        }
     }
 }

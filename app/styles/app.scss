@@ -22,11 +22,14 @@
 @import
 'layout/navbar';
 
-// Components
-// While layout/ is macro (defining the global wireframe), components/ is more
-// focused on widgets. It holds specific modules likes media, thumbnails, etc.
-
 // Pages
 // Page-specific styles, in a file named after the page.
 @import
+'pages/index',
 'pages/post';
+
+// Components
+// While layout/ is macro (defining the global wireframe), components/ is more
+// focused on widgets. It holds specific modules likes media, thumbnails, etc.
+@import
+'components/transparent';

@@ -1,0 +1,25 @@
+$jumbotron-image: 'https://pbs.twimg.com/media/CmjwoXrWYAAUcsI.jpg:large';
+
+.index {
+}
+
+.jumbo {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    div {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        background-image: url($jumbotron-image);
+        background-size: cover;
+        background-position: center center;
+        pointer-events: none;
+    }
+
+    h2 {
+        left: 50%;
+        top: 50%;
+    }
+}

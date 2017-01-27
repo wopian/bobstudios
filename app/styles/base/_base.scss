@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 
-    &:not(.offset) {
+    &.offset {
         // Fixed header offset
         padding-top: calc(54px + 1rem);
     }
