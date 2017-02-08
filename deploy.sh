@@ -16,7 +16,7 @@ git init
 git config user.name "$GH_USERNAME"
 git config user.email "$GH_EMAIL"
 
-git remote add upstream "https://$GH_TOKEN@github.com/wopian/bobstudios.git"
+git remote add upstream "https://$GH_TOKEN@github.com/wopian/bobstudios-client.git"
 git fetch upstream
 git reset upstream/gh-pages
 
